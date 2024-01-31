@@ -1,0 +1,9 @@
+
+[paths]
+source =
+    cards_proj/src/cards
+    */site-packages/cards
+
+;[report]
+;exclude_also =
+;    if __name__ == .__main__.:

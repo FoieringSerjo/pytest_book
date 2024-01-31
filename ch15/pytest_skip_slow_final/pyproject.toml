@@ -1,0 +1,30 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pytest-skip-slow"
+version = "0.0.1"
+dependencies = ["pytest"]
+requires-python = ">=3.8"
+authors = [{name = "Brian Okken"}]
+description = "A pytest plugin to skip `@pytest.mark.slow` tests by default."
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Framework :: Pytest"
+]
+
+[project.optional-dependencies]
+test = ["tox"]
+
+[project.urls]
+Home = "https://github.com/okken/pytest-skip-slow"
+
+[project.entry-points.pytest11]
+skip_slow = "pytest_skip_slow"
+
+[tool.flit.module]
+name = "pytest_skip_slow"
+
